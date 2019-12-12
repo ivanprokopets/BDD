@@ -87,11 +87,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CodeBindings\Add_Record_AdminSteps.cs" />
+    <Compile Include="CodeBindings\Edit_Record_AdminSteps.cs" />
+    <Compile Include="CodeBindings\Remove_Record_AdminSteps.cs" />
     <Compile Include="CodeBindings\UserAdminSteps.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="CodeBindings\UserRegistrationSteps.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="Features\Add_Record_Admin.feature" />
+    <None Include="Features\Edit_Record_Admin.feature" />
+    <None Include="Features\Remove_Record_Admin.feature" />
+    <None Include="Features\UserRegistration.feature" />
     <None Include="Features\UserAdmin.feature" />
     <None Include="packages.config" />
   </ItemGroup>

@@ -21,10 +21,10 @@ namespace ClassLibrary1.CodeBindings
         [When(@"I login as an administrator")]
         public void WhenILoginAsAnAdministrator()
         {
-            driver.FindElement(By.PartialLinkText("Login")).Click();
-            driver.FindElement(By.Id("username")).SendKeys("Edgewords");
-            driver.FindElement(By.Id("password")).SendKeys("edgewords123");
-            driver.FindElement(By.LinkText("Submit")).Click();
+                driver.FindElement(By.PartialLinkText("Login")).Click();
+                driver.FindElement(By.Id("username")).SendKeys("Edgewords");
+                driver.FindElement(By.Id("password")).SendKeys("edgewords123");
+                driver.FindElement(By.LinkText("Submit")).Click();
         }
         
         [Then(@"I see the full admin list of options")]
@@ -35,7 +35,7 @@ namespace ClassLibrary1.CodeBindings
             Assert.That(driver.FindElement(By.LinkText("Add Record")).Displayed);
             //Assert.Equals("Add Record", driver.FindElement(By.LinkText("Add Record")).Displayed);
             //Assert.assertEquals("Log In – Perficient Wiki ", driver.ge());
-            //driver.Quit();
+            driver.Close();
         }
     }
 }

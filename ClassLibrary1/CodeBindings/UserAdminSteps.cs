@@ -3,16 +3,21 @@ using TechTalk.SpecFlow;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Edge;
 using NUnit.Framework;
+using AventStack.ExtentReports.Gherkin.Model;
+
+
 namespace ClassLibrary1.CodeBindings
 {
     [Binding]
     public class UserAdminSteps
     {
+
         IWebDriver driver;
 
-        [Given(@"That I am on the edgewords web site")]
+        [Given(@"That I am on the edgewords web site")] 
         public void GivenThatIAmOnTheEdgewordsWebSite()
         {
+
             driver = new EdgeDriver();
             driver.Url = "https://www.edgewordstraining.co.uk/webdriver2";
 
@@ -30,12 +35,14 @@ namespace ClassLibrary1.CodeBindings
         [Then(@"I see the full admin list of options")]
         public void ThenISeeTheFullAdminListOfOptions()
         {
-            //bool titleTextfield = driver.FindElement(By.LinkText("Add Record")).Displayed;
-            //Assert.False(titleTextfield, "Title text field present which is not expected");
             Assert.That(driver.FindElement(By.LinkText("Add Record")).Displayed);
-            //Assert.Equals("Add Record", driver.FindElement(By.LinkText("Add Record")).Displayed);
-            //Assert.assertEquals("Log In – Perficient Wiki ", driver.ge());
             driver.Close();
+        }
+
+        [Then(@"I am logout of application")]
+        public void ThenIAmLogoutOfApplication()
+        {
+            ScenarioContext.Current.Pending();
         }
     }
 }
